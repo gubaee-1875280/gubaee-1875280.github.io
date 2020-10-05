@@ -1,20 +1,89 @@
 <html>
     <head>
-        <title>Establishing a Web Site Workshop</title>
+        <style>
+            *{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border-radius: 15%;
+            }
+           #map {
+                height: 30%;
+                width: 40%;
+            }
+            img{
+                height: 30%;
+                width: 40%;
+            }
+            iframe{
+                height: 30%;
+                width: 40%;
+            }
+            div{
+                padding-left: 50px;
+                padding-top: 30px;
+            }
+         </style>
+        <title>Original Work: Show your embedding stuff</title>
     </head>
     <body>
-        <h1>Establishing a Web Site Workshop</h1>
+        <div>
+            <script defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKw8BcbP7QoUSVYrPkr41XkEh36HdI9-I&callback=initMap">
+            </script>
 
-        <img src="images/youtube_logo.png">
+            <h1>Original Work: Show your embedding stuff</h1>
 
-        <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/cq2Ef6rvL6g?start=180"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
+            <h2>Level 1: Newbie</h2>
 
+            <br>1. A youtube video <br>
+            <iframe
+                src="https://www.youtube.com/embed/cq2Ef6rvL6g"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <br>
+
+            <br>2. Google Maps<br>
+            <!--The div element for the map -->
+            <div id="map"></div>
+            <script>
+                // Initialize and add the map
+                function initMap() {
+                // The location of Uluru
+                var uluru = {lat: -25.344, lng: 131.036};
+                // The map, centered at Uluru
+                var map = new google.maps.Map(
+                    document.getElementById('map'), {zoom: 4, center: uluru});
+                // The marker, positioned at Uluru
+                var marker = new google.maps.Marker({position: uluru, map: map});
+                }
+            </script>
+            <br> 3. Something we didn't demo on Workshop. Adding round effect to things <br>
+            <br> 4. bonus.. youtube image<br>
+            <img src="images/youtube_logo.png" width="10%" height="10%">
+
+            <h2>Level 2: Apprentice</h2>
+            <br>1. A youtube video plays starting at 3 mins<br>
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/cq2Ef6rvL6g?start=180"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <br>2. Something using HTML5 video tag<br>
+            <video id="video1" height="240" controls>
+                <source src="videos/Video Of Funny Cat.mp4" type="video/mp4">
+                <source src="videos/Video Of Funny Cat.ogg" type="video/ogg">
+                <source src="videos/Video Of Funny Cat.webm" type="video/webm">
+                Your browser does not support HTML video.
+            </video>
+            
+            <br>3. Something using the object tag<br>
+            <object data="images/funny-animals.gif"></object>
+            <h2>Level 3: Master</h2>
+        </div>
     </body>
 </html>
