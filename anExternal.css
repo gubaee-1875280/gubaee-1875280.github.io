@@ -1,10 +1,8 @@
 * {
     margin: 20px;
 }
-body {
-    
-}
-img:hover {
+
+.newb:hover {
     transform: scale(10);
 }
 
@@ -12,10 +10,35 @@ img:hover {
     font-family: "Times New Roman", Times, serif;
 }
   
-.sansserif {
-    font-family: Arial, Helvetica, sans-serif;
+.sans-serif {
+    font-family: Impact, sans-serif;
 }
   
 .monospace {
     font-family: "Lucida Console", Courier, monospace;
+}
+
+.level2container {
+    position: relative;
+    text-align: center;
+    color: white;
+    background-color: lightgray;
+}
+.level2center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    border-style: dotted;
+    border-width: 2px;
+    border-color: coral;
+}
+
+.level3container {
+    position: relative;
+}
+
+.level3img {
+    border-radius: 50px;
 }
